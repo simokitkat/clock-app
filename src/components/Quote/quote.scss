@@ -1,0 +1,29 @@
+@use "../../variables&mixins.scss" as *;
+
+.quote {
+  color: $white;
+  @include flexH(15.67px);
+  max-width: 100%;
+
+  .text {
+    @include flexH(13px);
+    flex-direction: column;
+
+    p {
+      @include BodyText;
+    }
+
+    h2 {
+      @include Heading5;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    height: fit-content;
+    padding-top: 10.67px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}

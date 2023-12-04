@@ -1,0 +1,50 @@
+@use "./variables&mixins.scss" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $inter;
+}
+
+main {
+  height: max(800px, 100vh);
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 56px 0 98px;
+  position: relative;
+
+  &.day {
+    background-image: url("./assets/desktop/bg-image-daytime.jpg");
+  }
+
+  &.night {
+    background-image: url("./assets/desktop/bg-image-nighttime.jpg");
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: $black;
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: min(1110px, 77.083%);
+    height: 100%;
+    margin: auto;
+  }
+}
