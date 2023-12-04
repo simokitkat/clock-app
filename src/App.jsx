@@ -3,6 +3,8 @@ import { useGlobalContext } from "./components/GlobalContext/GlobalContext";
 import { actions } from "./components/GlobalContext/reducer";
 import "./globalstyles.scss";
 import Quote from "./components/Quote/Quote";
+import TimeAndLocation from "./components/Time/TimeAndLocation";
+import MoreDetails from "./components/MoreDetails/MoreDetails";
 
 function App() {
   const { state, dispatch } = useGlobalContext();
@@ -16,7 +18,9 @@ function App() {
       <div className="overlay"></div>
       <div className="container">
         <Quote />
+        <TimeAndLocation />
       </div>
+      <MoreDetails />
     </main>
   );
 }

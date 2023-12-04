@@ -7,10 +7,13 @@ const AppContext = createContext();
 
 const defaultValue = {
   timeNow: new Date(),
+  timeZoneAbbreviation: "",
   isDay: true,
   isQuoteLoading: true,
   isQuoteError: false,
   quote: "",
+  worldTime: {},
+  location: {},
 };
 
 export const useGlobalContext = () => useContext(AppContext);
