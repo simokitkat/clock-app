@@ -6,14 +6,12 @@ import { reducer } from "./reducer";
 const AppContext = createContext();
 
 const defaultValue = {
-  timeNow: new Date(),
-  timeZoneAbbreviation: "",
-  isDay: true,
-  isQuoteLoading: true,
-  isQuoteError: false,
   quote: "",
   worldTime: {},
   location: {},
+  timeStatus: "",
+  timeNow: "",
+  timeZone: "",
 };
 
 export const useGlobalContext = () => useContext(AppContext);

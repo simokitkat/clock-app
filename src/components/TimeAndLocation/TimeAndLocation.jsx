@@ -9,8 +9,8 @@ export default function TimeAndLocation() {
   return (
     <section className="time-and-location">
       <Greeting />
-      <Hours />
-      {state.location && <Location />}
+      {state.timeNow && <Hours />}
+      {/* {state.location && <Location />} */}
     </section>
   );
 }
