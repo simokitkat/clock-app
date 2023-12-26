@@ -19,9 +19,6 @@ export default function Hours() {
         {`${state.timeNow.getHours().toString().padStart(2, 0)}:${state.timeNow
           .getMinutes()
           .toString()
-          .padStart(2, 0)}:${state.timeNow
-          .getSeconds()
-          .toString()
           .padStart(2, 0)}`}
         <span>{state.timeZone}</span>
       </h1>
