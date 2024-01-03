@@ -8,7 +8,7 @@ const AppContext = createContext();
 const defaultValue = {
   quote: "",
   worldTime: {},
-  location: {},
+  location: "",
   timeStatus: "",
   timeNow: "",
   timeZone: "",

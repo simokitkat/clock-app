@@ -1,10 +1,10 @@
 export const actions = {
   SET_INITIALS: "SET_INITIALS",
   SET_QUOTE: "SET_QUOTE",
-  SET_ISDAY: "SET_ISDAY",
   SET_TIME: "SET_TIME",
-  SET_WORLD_TIME: "SET_WORLD_TIME",
-  SET_LOCATION: "SET_LOCATION",
+  // SET_ISDAY: "SET_ISDAY",
+  // SET_WORLD_TIME: "SET_WORLD_TIME",
+  // SET_LOCATION: "SET_LOCATION",
 };
 
 export const reducer = (state, action) => {
@@ -46,18 +46,5 @@ export const reducer = (state, action) => {
     };
   }
 
-  // if (action.type === actions.SET_WORLD_TIME) {
-  //   state = {
-  //     ...state,
-  //     worldTime: action.payload,
-  //   };
-  // }
-
-  // if (action.type === actions.SET_LOCATION) {
-  //   state = {
-  //     ...state,
-  //     location: action.payload,
-  //   };
-  // }
   return state;
 };
