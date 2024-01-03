@@ -15,7 +15,7 @@ function App() {
         const quoteRequest = await fetch(
           "https://api.quotable.io/quotes/random"
         );
-        const timeRequest = await fetch("http://worldtimeapi.org/api/ip");
+        const timeRequest = await fetch("https://worldtimeapi.org/api/ip");
         const locationRequest = await fetch(`https://ipapi.co/json/`);
 
         if (!quoteRequest.ok || !timeRequest.ok || !locationRequest.ok) {
