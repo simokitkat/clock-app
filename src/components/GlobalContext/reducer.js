@@ -2,6 +2,7 @@ export const actions = {
   SET_INITIALS: "SET_INITIALS",
   SET_QUOTE: "SET_QUOTE",
   SET_TIME: "SET_TIME",
+  SET_ISMORE: "SET_ISMORE",
   // SET_ISDAY: "SET_ISDAY",
   // SET_WORLD_TIME: "SET_WORLD_TIME",
   // SET_LOCATION: "SET_LOCATION",
@@ -14,6 +15,10 @@ export const reducer = (state, action) => {
       action.payload.worldTime.datetime.indexOf(".")
     );
     const time = new Date(timeString);
+
+    //adding 3 seconds to consider the time of fetching data so that the time will be more or less equal to the time of the user
+    time.setSeconds(time.getSeconds() + 3);
+
     const hours = time.getHours();
 
     state = {
@@ -43,6 +48,13 @@ export const reducer = (state, action) => {
     state = {
       ...state,
       timeNow: newDate,
+    };
+  }
+
+  if (action.type === actions.SET_ISMORE) {
+    state = {
+      ...state,
+      isMore: action.payload,
     };
   }
 

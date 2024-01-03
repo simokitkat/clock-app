@@ -3,6 +3,45 @@
   color: $white;
   @include flexH(16px);
   flex-direction: column;
+  position: relative;
+
+  .is-more {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 146px;
+    height: 56px;
+    border-radius: 28px;
+    background: $white;
+    padding: 0 9px 0 21px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+
+    span {
+      color: $black;
+      font-family: $inter;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 28px; /* 175% */
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+
+    svg circle {
+      transition: 0.3s;
+    }
+
+    &:hover {
+      svg circle {
+        fill: #999999;
+      }
+    }
+  }
 }
 
 .greeting {

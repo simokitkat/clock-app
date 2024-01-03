@@ -4,8 +4,9 @@ import { useGlobalContext } from "../../components/GlobalContext/GlobalContext";
 export default function Greeting() {
   const { state } = useGlobalContext();
 
-  const hours = new Date(state.worldTime.datetime).getHours();
+  const hours = state.timeNow.getHours();
   console.log(state);
+
   return (
     state.timeStatus && (
       <div className="greeting">

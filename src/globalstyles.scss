@@ -20,6 +20,7 @@ main {
   background-repeat: no-repeat;
   padding: 56px 0 98px;
   position: relative;
+  overflow: hidden;
 
   &.day {
     background-image: url("./assets/desktop/bg-image-daytime.jpg");

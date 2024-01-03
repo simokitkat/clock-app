@@ -53,10 +53,11 @@ function App() {
     >
       <div className="overlay"></div>
       <div className="container">
-        <Quote />
+        {!state.isMore && <Quote />}
+        {/* <Quote /> */}
         <TimeAndLocation />
       </div>
-      {/* <MoreDetails /> */}
+      <MoreDetails />
     </main>
   );
 }

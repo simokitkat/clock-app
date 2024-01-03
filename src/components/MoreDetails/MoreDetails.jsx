@@ -1,26 +1,30 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useGlobalContext } from "../GlobalContext/GlobalContext";
-import { actions } from "../GlobalContext/reducer";
+import "./more-details.scss";
 
 export default function MoreDetails() {
-  const { state, dispatch } = useGlobalContext();
+  const { state } = useGlobalContext();
+  const [detailsClass, setDetailsClass] = useState("more-details");
 
   useEffect(() => {
-    async function getTimeDetails() {
-      try {
-        const request = await fetch("http://worldtimeapi.org/api/ip");
-        if (!request.ok) {
-          return;
-        }
-
-        const reposonse = await request.json();
-        dispatch({ type: actions.SET_WORLD_TIME, payload: reposonse });
-        console.log(reposonse);
-      } catch (error) {
-        console.log(error);
-      }
+    if (state.isMore && !detailsClass.includes("show")) {
+      setDetailsClass((prev) => prev + " show");
+    } else {
+      setDetailsClass((prev) => {
+        const arr = prev.split(" ").filter((e) => e !== "show");
+        return arr.join(" ");
+      });
     }
-    getTimeDetails();
-  }, []);
-  return <div>MoreDetails</div>;
+
+    if (state.timeStatus === "day" && !detailsClass.includes("day")) {
+      setDetailsClass((prev) => prev + " day");
+    } else {
+      setDetailsClass((prev) => {
+        const arr = prev.split(" ").filter((e) => e !== "day");
+        return arr.join(" ");
+      });
+    }
+  }, [state.isMore]);
+
+  return <div className={detailsClass}></div>;
 }

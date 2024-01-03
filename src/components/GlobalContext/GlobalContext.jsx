@@ -7,11 +7,12 @@ const AppContext = createContext();
 
 const defaultValue = {
   quote: "",
-  worldTime: {},
   location: "",
+  worldTime: {},
   timeStatus: "",
   timeNow: "",
   timeZone: "",
+  isMore: false,
 };
 
 export const useGlobalContext = () => useContext(AppContext);
