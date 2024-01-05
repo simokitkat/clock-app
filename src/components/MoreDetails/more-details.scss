@@ -10,6 +10,7 @@
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(20.387113571166992px);
   transition: 0.5s;
+  padding: 74px 400px 74px 165px;
 
   &.show {
     bottom: 0;
@@ -18,5 +19,46 @@
   &.day {
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(20.387113571166992px);
+  }
+}
+
+.details-container {
+  height: 252px;
+  @include flexH(120px);
+  // display: flex;
+  // justify-content: space-between;
+  position: relative;
+  color: $white;
+
+  &.day {
+    color: $grey;
+  }
+
+  .vertical-line {
+    // position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: $white;
+    // left: 50%;
+    // top: 0;
+    // transform: translateX(-50%);
+
+    &.day {
+      background-color: $grey;
+    }
+  }
+
+  .right,
+  .left {
+    @include flexH(42px);
+    flex-direction: column;
+
+    h6 {
+      @include Heading6;
+    }
+
+    h2 {
+      @include Heading2;
+    }
   }
 }

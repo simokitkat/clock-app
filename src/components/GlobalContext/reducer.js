@@ -16,8 +16,7 @@ export const reducer = (state, action) => {
     );
     const time = new Date(timeString);
 
-    //adding 3 seconds to consider the time of fetching data so that the time will be more or less equal to the time of the user
-    time.setSeconds(time.getSeconds() + 3);
+    time.setSeconds(new Date().getSeconds());
 
     const hours = time.getHours();
 

@@ -26,5 +26,41 @@ export default function MoreDetails() {
     }
   }, [state.isMore]);
 
-  return <div className={detailsClass}></div>;
+  return (
+    <div className={detailsClass}>
+      <div
+        className={
+          state.timeStatus === "day"
+            ? "details-container day"
+            : "details-container"
+        }
+      >
+        <div className="left">
+          <div>
+            <h6>CURRENT TIMEZONE</h6>
+            <h2>{state.worldTime?.timezone}</h2>
+          </div>
+          <div>
+            <h6>Day of the year</h6>
+            <h2>{state.worldTime?.day_of_year}</h2>
+          </div>
+        </div>
+        <div
+          className={
+            state.timeStatus === "day" ? "vertical-line day" : "vertical-line"
+          }
+        ></div>
+        <div className="right">
+          <div>
+            <h6>Day of the week</h6>
+            <h2>{state.worldTime?.day_of_week}</h2>
+          </div>
+          <div>
+            <h6>Week number</h6>
+            <h2>{state.worldTime?.week_number}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
