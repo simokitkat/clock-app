@@ -3,7 +3,33 @@
   color: $white;
   @include flexH(16px);
   flex-direction: column;
-  position: relative;
+  // position: relative;
+  min-height: 288px;
+  height: fit-content;
+  position: absolute;
+  top: calc(100% - 288px);
+  width: 100%;
+  transition: 1s;
+
+  &.top {
+    // left: 100%;
+    // bottom: auto;
+    top: 0;
+    // right: auto;
+  }
+
+  //animation of time and location
+  // @keyframes animate-time {
+  //   0% {
+  //     bottom: 0;
+  //     top: auto;
+  //   }
+
+  //   100% {
+  //     bottom: auto;
+  //     top: 0;
+  //   }
+  // }
 
   .is-more {
     position: absolute;

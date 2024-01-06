@@ -41,11 +41,34 @@ main {
   .container {
     position: relative;
     z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    // display: flex;
+    // // justify-content: space-between;
+    // justify-content: flex-end;
+    // flex-direction: column;
     width: min(1110px, 77.083%);
     height: 100%;
     margin: auto;
+    // transition: 1s linear all;
+
+    // transition: 1s;
+
+    // &.is-more {
+    //   justify-content: flex-start;
+
+    //   .time-and-location {
+    //     animation: animate 1s linear;
+    //   }
+    // }
+  }
+}
+
+//animation for time-and-location
+@keyframes animate {
+  0% {
+    transform: translateY(500%);
+  }
+
+  100% {
+    transform: translateY(0%);
   }
 }

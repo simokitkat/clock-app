@@ -8,7 +8,10 @@ import "./time&location.scss";
 export default function TimeAndLocation() {
   const { state } = useGlobalContext();
   return (
-    <section className="time-and-location">
+    // <section className="time-and-location">
+    <section
+      className={state.isMore ? "time-and-location top" : "time-and-location"}
+    >
       {state.timeNow && (
         <>
           <Greeting />

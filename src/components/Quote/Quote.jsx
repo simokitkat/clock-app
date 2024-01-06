@@ -23,7 +23,7 @@ function Quote() {
 
   console.log(state);
   return (
-    <section className="quote">
+    <section className={state.isMore ? "quote hide" : "quote"}>
       <div className="text">
         <p>{state?.quote[0]?.content}</p>
         <h2>{state?.quote[0]?.author}</h2>

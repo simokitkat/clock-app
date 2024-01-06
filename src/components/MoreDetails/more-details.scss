@@ -9,8 +9,9 @@
   height: 400px;
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(20.387113571166992px);
-  transition: 0.5s;
-  padding: 74px 400px 74px 165px;
+  transition: 1s;
+  // padding: 74px 400px 74px 165px;
+  padding: 74px 165px;
 
   &.show {
     bottom: 0;
@@ -24,7 +25,8 @@
 
 .details-container {
   height: 252px;
-  @include flexH(120px);
+  @include flexH(340px);
+  // width: 100%;
   // display: flex;
   // justify-content: space-between;
   position: relative;
@@ -35,13 +37,13 @@
   }
 
   .vertical-line {
-    // position: absolute;
+    position: absolute;
     height: 100%;
     width: 1px;
     background-color: $white;
-    // left: 50%;
-    // top: 0;
-    // transform: translateX(-50%);
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
 
     &.day {
       background-color: $grey;

@@ -4,6 +4,15 @@
   color: $white;
   @include flexH(15.67px);
   max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s;
+
+  &.hide {
+    // display: none;
+    left: 999%;
+  }
 
   .text {
     @include flexH(13px);
