@@ -1,9 +1,8 @@
 @use "../../variables&mixins.scss" as *;
 .time-and-location {
   color: $white;
-  @include flexH(16px);
-  flex-direction: column;
-  // position: relative;
+  display: flex;
+  justify-content: space-between;
   min-height: 288px;
   height: fit-content;
   position: absolute;
@@ -12,29 +11,50 @@
   transition: 1s;
 
   &.top {
-    // left: 100%;
-    // bottom: auto;
     top: 0;
-    // right: auto;
+  }
+}
+
+.details {
+  @include flexH(16px);
+  flex-direction: column;
+  .greeting {
+    @include flexH(16px);
+    align-items: center;
+
+    p {
+      @include Heading4;
+    }
   }
 
-  //animation of time and location
-  // @keyframes animate-time {
-  //   0% {
-  //     bottom: 0;
-  //     top: auto;
-  //   }
+  .hours {
+    h1 {
+      @include Heading1;
+    }
 
-  //   100% {
-  //     bottom: auto;
-  //     top: 0;
-  //   }
-  // }
+    span {
+      margin-left: 11px;
+      font-size: 40px;
+      font-weight: 300;
+      line-height: 28px; /* 70% */
+      text-transform: uppercase;
+    }
+  }
+
+  .location {
+    h3 {
+      @include Heading3;
+    }
+  }
+}
+
+.more-button {
+  width: 146px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
   .is-more {
-    position: absolute;
-    bottom: 0;
-    right: 0;
     width: 146px;
     height: 56px;
     border-radius: 28px;
@@ -67,34 +87,5 @@
         fill: #999999;
       }
     }
-  }
-}
-
-.greeting {
-  @include flexH(16px);
-  align-items: center;
-
-  p {
-    @include Heading4;
-  }
-}
-
-.hours {
-  h1 {
-    @include Heading1;
-  }
-
-  span {
-    margin-left: 11px;
-    font-size: 40px;
-    font-weight: 300;
-    line-height: 28px; /* 70% */
-    text-transform: uppercase;
-  }
-}
-
-.location {
-  h3 {
-    @include Heading3;
   }
 }

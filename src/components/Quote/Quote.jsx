@@ -29,9 +29,11 @@ function Quote() {
         <h2>{state?.quote[0]?.author}</h2>
       </div>
 
-      <button onClick={fetchQuote}>
-        <img src={refreshIcon} alt="refresh icon" />
-      </button>
+      {state?.quote[0] && (
+        <button onClick={fetchQuote}>
+          <img src={refreshIcon} alt="refresh icon" />
+        </button>
+      )}
     </section>
   );
 }

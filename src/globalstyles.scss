@@ -41,34 +41,20 @@ main {
   .container {
     position: relative;
     z-index: 1;
-    // display: flex;
-    // // justify-content: space-between;
-    // justify-content: flex-end;
-    // flex-direction: column;
     width: min(1110px, 77.083%);
     height: 100%;
     margin: auto;
-    // transition: 1s linear all;
-
-    // transition: 1s;
-
-    // &.is-more {
-    //   justify-content: flex-start;
-
-    //   .time-and-location {
-    //     animation: animate 1s linear;
-    //   }
-    // }
   }
 }
 
-//animation for time-and-location
-@keyframes animate {
-  0% {
-    transform: translateY(500%);
-  }
+//Tablet Version
+@media (width<1350px) {
+  main {
+    height: max(1024px, 100vh);
+    padding: 80px 0 64px;
 
-  100% {
-    transform: translateY(0%);
+    .container {
+      width: min(1110px, 74.61%);
+    }
   }
 }

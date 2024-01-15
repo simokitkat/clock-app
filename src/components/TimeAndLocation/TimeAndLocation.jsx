@@ -12,19 +12,17 @@ export default function TimeAndLocation() {
     <section
       className={state.isMore ? "time-and-location top" : "time-and-location"}
     >
-      {state.timeNow && (
-        <>
-          <Greeting />
-          <Hours />
-        </>
-      )}
+      <div className="details">
+        {state.timeNow && (
+          <>
+            <Greeting />
+            <Hours />
+          </>
+        )}
+        {state.location && <Location />}
+      </div>
 
-      {state.location && (
-        <>
-          <Location />
-          <IsMoreButton />
-        </>
-      )}
+      <div className="more-button">{state.location && <IsMoreButton />}</div>
     </section>
   );
 }

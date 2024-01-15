@@ -35,6 +35,7 @@ export default function MoreDetails() {
             : "details-container"
         }
       >
+        {/* left */}
         <div className="left">
           <div>
             <h6>CURRENT TIMEZONE</h6>
@@ -45,11 +46,7 @@ export default function MoreDetails() {
             <h2>{state.worldTime?.day_of_year}</h2>
           </div>
         </div>
-        <div
-          className={
-            state.timeStatus === "day" ? "vertical-line day" : "vertical-line"
-          }
-        ></div>
+        {/* right */}
         <div className="right">
           <div>
             <h6>Day of the week</h6>
@@ -60,6 +57,12 @@ export default function MoreDetails() {
             <h2>{state.worldTime?.week_number}</h2>
           </div>
         </div>
+        {/* vertical line */}
+        <div
+          className={
+            state.timeStatus === "day" ? "vertical-line day" : "vertical-line"
+          }
+        ></div>
       </div>
     </div>
   );

@@ -10,7 +10,6 @@
   background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(20.387113571166992px);
   transition: 1s;
-  // padding: 74px 400px 74px 165px;
   padding: 74px 165px;
 
   &.show {
@@ -25,10 +24,10 @@
 
 .details-container {
   height: 252px;
-  @include flexH(340px);
-  // width: 100%;
-  // display: flex;
-  // justify-content: space-between;
+  max-width: 1110px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
   position: relative;
   color: $white;
 
@@ -54,6 +53,7 @@
   .left {
     @include flexH(42px);
     flex-direction: column;
+    width: calc(50% - 94px);
 
     h6 {
       @include Heading6;

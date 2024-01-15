@@ -52,9 +52,7 @@ function App() {
       }
     >
       <div className="overlay"></div>
-      {/* <div className={state.isMore ? "container is-more" : "container"}> */}
       <div className="container">
-        {/* {!state.isMore && <Quote />} */}
         <Quote />
         <TimeAndLocation />
       </div>

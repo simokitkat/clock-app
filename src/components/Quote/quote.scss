@@ -36,3 +36,12 @@
     cursor: pointer;
   }
 }
+
+//tablet version
+@media (width<1350px) {
+  .quote {
+    button {
+      padding-top: 9.67px;
+    }
+  }
+}
