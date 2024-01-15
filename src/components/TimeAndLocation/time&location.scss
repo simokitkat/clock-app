@@ -89,3 +89,41 @@
     }
   }
 }
+
+//tablet version
+@media only screen and (width < 1350px) {
+  .time-and-location {
+    flex-direction: column;
+    min-height: 367px;
+    top: calc(100% - 367px);
+  }
+
+  .details {
+    gap: 0;
+
+    .greeting {
+      p {
+        font-size: 18px;
+        letter-spacing: 3.6px;
+      }
+    }
+
+    .hours {
+      h1 {
+        font-size: 120px;
+        letter-spacing: -4.375px;
+      }
+
+      span {
+        font-size: 32px;
+      }
+    }
+
+    .location {
+      h3 {
+        font-size: 18px;
+        letter-spacing: 3.6px;
+      }
+    }
+  }
+}

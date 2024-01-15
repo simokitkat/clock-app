@@ -36,13 +36,9 @@
   }
 
   .vertical-line {
-    position: absolute;
     height: 100%;
     width: 1px;
     background-color: $white;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
 
     &.day {
       background-color: $grey;
@@ -53,7 +49,6 @@
   .left {
     @include flexH(42px);
     flex-direction: column;
-    width: calc(50% - 94px);
 
     h6 {
       @include Heading6;
@@ -61,6 +56,40 @@
 
     h2 {
       @include Heading2;
+    }
+  }
+}
+
+//Tablet version
+@media (width<1350px) {
+  .more-details {
+    bottom: -440px;
+    height: 440px;
+    padding: 119px 64px;
+  }
+
+  .details-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 86.4%;
+
+    .vertical-line {
+      display: none;
+    }
+
+    .right,
+    .left {
+      gap: 48px;
+
+      h6 {
+        font-size: 13px;
+        letter-spacing: 2.6px;
+      }
+
+      h2 {
+        font-size: 40px;
+      }
     }
   }
 }
