@@ -127,3 +127,72 @@
     }
   }
 }
+
+//mobile version
+@media (width < 800px) {
+  .time-and-location {
+    min-height: 272px;
+    top: calc(100% - 272px);
+  }
+
+  .details {
+    @include flexH(16px);
+
+    .greeting {
+      p {
+        @include Heading6;
+        line-height: 25px;
+      }
+    }
+
+    .hours {
+      h1 {
+        @include Heading2;
+        line-height: 100px;
+        letter-spacing: -2.5px;
+      }
+
+      span {
+        font-size: 15px;
+        margin-left: 13px;
+        letter-spacing: 0px;
+      }
+    }
+
+    .location {
+      h3 {
+        @include Heading6;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .more-button {
+    .is-more {
+      width: 115px;
+      height: 39px;
+      padding: 3px 4px 4px 17px;
+
+      span {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 3.75px;
+      }
+
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+@media (width < 400px) {
+  .details {
+    .hours {
+      h1 {
+        font-size: 48px;
+      }
+    }
+  }
+}

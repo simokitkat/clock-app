@@ -45,3 +45,19 @@
     }
   }
 }
+
+//mobile version
+@media (width<800px) {
+  .quote {
+    .text {
+      @include flexH(8px);
+
+      p,
+      h2 {
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: 0px;
+      }
+    }
+  }
+}
